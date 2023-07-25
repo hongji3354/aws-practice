@@ -9,5 +9,6 @@ pluginManagement {
 rootProject.name = 'practice'
 
 include(
-        ':sqs-practice'
+        ':sqs-practice',
+        ':sqs-lambda-practice'
 )

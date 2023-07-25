@@ -1,0 +1,16 @@
+version = "0.0.1"
+
+dependencies {
+    implementation "com.amazonaws:aws-lambda-java-core:${awsSdkJavaCoreVersion}"
+    implementation "com.amazonaws:aws-lambda-java-events:${awsSdkJavaEventVersion}"
+    runtimeOnly "com.amazonaws:aws-lambda-java-log4j2:${awsSdkJavaLog4j2Version}"
+}
+
+task buildZip(type: Zip) {
+    archiveFileName = "sqs-lambda-practice-${version}.zip"
+    group = 'build'
+    into('lib') {
+        from(jar)
+        from(configurations.runtimeClasspath)
+    }
+}
