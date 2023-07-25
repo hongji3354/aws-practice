@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    aws:
+      sqs:
+        region: ap-northeast-2
+        endpoint: https://sqs.ap-northeast-2.amazonaws.com
+        name:
+          practice: practice.fifo
+      credentials:
+        access-key:
+        secret-key:
